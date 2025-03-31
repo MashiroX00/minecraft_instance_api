@@ -5,10 +5,8 @@ const path = require('path');
 
 router.get('/', async (req,res) => {
     const InstancePath = path.join(__dirname, '../../Intances');
-    const {name, version} = req.body;
-    if(!name || !version) {
-        return res.status(400,).json({"message": "Name and Version of Instance is require."});
-    }
+    const name = 'test';
+    const version = '1_21'
     const instanceManager = new InstanceManager(name,version,InstancePath);
     try {
         let data = await instanceManager.getintance(name,version) || {};
