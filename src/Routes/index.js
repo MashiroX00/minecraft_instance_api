@@ -12,4 +12,5 @@ router.use("/startins", require("./startins"));
 router.use("/stopins", require("./stopins"));
 router.use("/sendcommand", require("./rcon"));
 router.use("/getinstance", require("./getInstance"));
+router.use("/getstatus", require('./getstatus'))
 module.exports = router;
